@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreiSuchi's Bentobox</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+        <div class="container">
+          <nav>
+            <!-- <img src="images/logo.png" class="logo" /> -->
+            <ul id="sidemenu">
+              <li><a href="#about">ABOUT US</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#contact">CONTACT US</a></li>
+              </i>
+            </ul>
+          </nav>
+          <div class="header-text">
+            <h1>Greetings! We are DreiSuchi</h1><br>
+            <h2 class="text1">We make <span id="typewriter" class="role_effect"></span></h2>
+          </div>
+        </div>
+      </div>
+      <div id="about">
+        <div class="container">
+          <div class="row">
+						<div class="about-col-2">
+							<h1 class="sub-title">About DreiSuchi</h1>
+							<p class="sub-content">
+								Lorem ipsum dolor sit amet. In alias corrupti et ipsa velit vel autem officiis aut quia corporis. 
+								Aut dolores minima ea fugit adipisci rem quia nisi qui unde voluptas. Et ipsam sunt aut neque nisi 
+								in optio ullam? Qui deserunt dignissimos ut totam nemo non dolores distinctio eos omnis eligendi cum 
+								velit voluptatibus in repellendus repellendus. Qui atque dolorem ad quae commodi in illo repudiandae sed 
+								nesciunt earum sit perspiciatis enim. Aut Quis cupiditate est omnis autem aut ullam magnam eum voluptatum 
+								internos sed rerum atque ut fuga autem sed quia impedit. Ab rerum autem sit voluptatem possimus aut tenetur 
+								quia At aperiam autem.
+							</p>
+						</div>
+          </div>
+        </div>
+      </div>     
+      <script>
+        // JavaScript to implement the typewriter effect
+        const textArray = ["Emotes", "Stream Overlays", "Artworks"];
+        let index = 0;
+        let currentText = "";
+        let letterIndex = 0;
+      
+        function type() {
+          if (letterIndex < textArray[index].length) {
+            currentText += textArray[index].charAt(letterIndex);
+            document.getElementById("typewriter").innerHTML = currentText;
+            letterIndex++;
+            setTimeout(type, 100); // Adjust typing speed (milliseconds)
+          } else {
+            setTimeout(erase, 1200); // Wait before erasing
+          }
+        }
+      
+        function erase() {
+          if (letterIndex >= 0) {
+            currentText = textArray[index].substring(0, letterIndex);
+            document.getElementById("typewriter").innerHTML = currentText;
+            letterIndex--;
+            setTimeout(erase, 50); // Adjust erasing speed (milliseconds)
+          } else {
+            index = (index + 1) % textArray.length;
+            setTimeout(type, 500); // Wait before typing the next text
+          }
+        }
+      
+        // Start the typing effect
+        type();
+      </script>
+  </body>
+  </html>
