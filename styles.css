@@ -1,118 +1,154 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background: #e2cbb0;
-    color: #fff;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  }
+body {
+  background: #e2cbb0;
+  color: #fff;
+}
 
-  nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 30px;
-  }
-  
-  nav ul li a {
-    color: #FFD925;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-  }
-  
-  nav ul li a::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background: #FFD925;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-  }
-  
-  nav ul li a:hover::after {
-    width: 100%;
-  }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
 
-  #header {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    background-image: url(images/bg2.gif);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+
+nav ul li a {
+  color: #FFD925;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #FFD925;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+#header {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url(images/bg2.gif);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: black; /* You can adjust the color to your preferred darkness */
-    opacity: 0.5; /* You can adjust the opacity to control the darkness */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black; /* You can adjust the color to your preferred darkness */
+  opacity: 0.5; /* You can adjust the opacity to control the darkness */
 }
 
 /* Additional styling for content inside the header if needed */
 #header h1 {
-    position: relative;
-    z-index: 1; /* Ensures the text is on top of the background */
+  position: relative;
+  z-index: 1; /* Ensures the text is on top of the background */
 }
 
 .header-text {
-    margin-top: 20%;
-    margin-left: 50px;
-    font-size: 30px;
-}
-  
-.header-text h1 {
-    font-size: 80px;
-    margin-top: 20px;
-    color: #FDBE02;
-    -webkit-text-stroke: 3px #987301;
+  margin-top: 20%;
+  margin-left: 50px;
+  font-size: 30px;
 }
 
-  /* h3:hover {
-    color: #000;
-    transition: 0.5s;
-  } */
+.header-text h1 {
+  font-size: 80px;
+  margin-top: 20px;
+  color: #FDBE02;
+  -webkit-text-stroke: 3px #987301;
+}
+
+/* h3:hover {
+  color: #000;
+  transition: 0.5s;
+} */
 
 .text1 {
-    position: relative;
-    color: #FFFFFF;
-  }
+  position: relative;
+  color: #FFFFFF;
+}
 
 .role_effect {
-    position:relative;
-    color: #FFD925;
-  }
+  position:relative;
+  color: #FFD925;
+}
 
 /* ABOUT */
 #about {
-    padding: 50px 0;
-    margin-left: 50px;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: relative;
-    flex-wrap: wrap;
-  }
+  padding: 50px 0;
+  margin-left: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: relative;
+  flex-wrap: wrap;
+}
+
+.sub-title {
+  color: #FDBE02;
+  -webkit-text-stroke: 1px #987301;
+}
+
+.sub-content {
+  color: #987301;
+}
+
+/* PORTFOLIO */
+#portfolio {
+  padding: 50px 0;
+  margin-left: 50px;
+  color: #FDBE02;
+  -webkit-text-stroke: 1px #987301;
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-list img {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
